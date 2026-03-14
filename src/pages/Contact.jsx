@@ -36,10 +36,10 @@ const Contact = () => {
   ]
 
   return (
-    <div className="bg-[#050505] text-white min-h-screen">
+    <div className="bg-[#0a1928] text-white min-h-screen">
       <Helmet>
         <title>Contact Us | {siteConfig.companyName}</title>
-        <meta name="description" content="Get in touch with Mekaddishkem Properties in Lagos. Call, WhatsApp, or email us to schedule viewings or inquire about properties in Lekki, Ajah, and beyond." />
+        <meta name="description" content="Get in touch with Earnest City Property Limited in Abuja. Call, WhatsApp, or email us to schedule viewings or inquire about properties in Maitama, Wuse, Asokoro, and beyond." />
       </Helmet>
 
       <section className="pt-32 pb-24 px-6">
@@ -48,11 +48,11 @@ const Contact = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-20 border-b border-white/5 pb-12"
+            className="mb-20 border-b border-amber-400/20 pb-12"
           >
-            <span className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-4 block font-bold">Get in Touch</span>
+            <span className="text-[10px] tracking-[0.5em] uppercase text-amber-400/60 mb-4 block font-bold">Get in Touch</span>
             <h1 className="text-5xl md:text-8xl font-extralight tracking-tighter leading-none">
-              Contact <span className="italic text-white/90">Us</span>
+              Contact <span className="italic text-amber-400/90">Us</span>
             </h1>
           </motion.div>
 
@@ -65,17 +65,17 @@ const Contact = () => {
               className="lg:col-span-4 space-y-16"
             >
               <div>
-                <h3 className="text-[10px] tracking-[0.3em] uppercase text-white/30 mb-6 font-bold">Let's Connect</h3>
-                <p className="text-lg font-light text-white/60 leading-relaxed italic">
-                  Whether you're looking for your dream home, a rental property, or expert advice in Lagos, we're here to help. Reach out today.
+                <h3 className="text-[10px] tracking-[0.3em] uppercase text-amber-400/60 mb-6 font-bold">Let's Connect</h3>
+                <p className="text-lg font-light text-white/70 leading-relaxed italic">
+                  Whether you're looking for your dream home, a rental property, or expert advice in Abuja, we're here to help. Reach out today.
                 </p>
               </div>
 
               <div className="space-y-8">
                 {contactMethods.map((method) => (
                   <div key={method.label} className="group">
-                    <p className="text-[9px] uppercase tracking-[0.3em] text-white/20 mb-2 font-bold">{method.label}</p>
-                    <a href={method.href} className="text-sm tracking-[0.2em] text-white/80 group-hover:text-white transition-colors uppercase font-light">
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/40 mb-2 font-bold">{method.label}</p>
+                    <a href={method.href} className="text-sm tracking-[0.2em] text-white/80 group-hover:text-amber-400 transition-colors uppercase font-light">
                       {method.value}
                     </a>
                   </div>
@@ -88,7 +88,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="lg:col-span-8 bg-white/[0.01] border border-white/5 rounded-[40px] p-8 md:p-16 backdrop-blur-sm"
+              className="lg:col-span-8 bg-white/[0.02] border border-amber-400/20 rounded-[40px] p-8 md:p-16 backdrop-blur-sm"
             >
               <AnimatePresence mode="wait">
                 {status.submitted ? (
@@ -97,57 +97,57 @@ const Contact = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     className="h-full flex flex-col items-center justify-center text-center py-20"
                   >
-                    <div className="w-12 h-[1px] bg-white/20 mb-10" />
-                    <h2 className="text-2xl font-extralight tracking-[0.3em] uppercase mb-4 text-white italic">Message Received</h2>
-                    <p className="text-white/40 text-[11px] tracking-widest uppercase font-light">Thank you for reaching out. We'll get back to you shortly.</p>
+                    <div className="w-12 h-[1px] bg-amber-400/30 mb-10" />
+                    <h2 className="text-2xl font-extralight tracking-[0.3em] uppercase mb-4 text-amber-400 italic">Message Received</h2>
+                    <p className="text-white/50 text-[11px] tracking-widest uppercase font-light">Thank you for reaching out. We'll get back to you shortly.</p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                       <div className="relative">
-                        <label className="text-[8px] tracking-[0.4em] text-white/20 uppercase mb-2 block font-bold">Full Name</label>
+                        <label className="text-[8px] tracking-[0.4em] text-amber-400/40 uppercase mb-2 block font-bold">Full Name</label>
                         <input
                           type="text"
                           name="name"
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full bg-transparent border-b border-white/10 py-3 text-xs tracking-widest focus:outline-none focus:border-white transition-colors uppercase font-light"
+                          className="w-full bg-transparent border-b border-amber-400/20 py-3 text-xs tracking-widest focus:outline-none focus:border-amber-400 transition-colors uppercase font-light text-white"
                         />
                       </div>
                       <div className="relative">
-                        <label className="text-[8px] tracking-[0.4em] text-white/20 uppercase mb-2 block font-bold">Email</label>
+                        <label className="text-[8px] tracking-[0.4em] text-amber-400/40 uppercase mb-2 block font-bold">Email</label>
                         <input
                           type="email"
                           name="email"
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full bg-transparent border-b border-white/10 py-3 text-xs tracking-widest focus:outline-none focus:border-white transition-colors uppercase font-light"
+                          className="w-full bg-transparent border-b border-amber-400/20 py-3 text-xs tracking-widest focus:outline-none focus:border-amber-400 transition-colors uppercase font-light text-white"
                         />
                       </div>
                     </div>
                     
                     <div className="relative">
-                      <label className="text-[8px] tracking-[0.4em] text-white/20 uppercase mb-2 block font-bold">Phone Number</label>
+                      <label className="text-[8px] tracking-[0.4em] text-amber-400/40 uppercase mb-2 block font-bold">Phone Number</label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full bg-transparent border-b border-white/10 py-3 text-xs tracking-widest focus:outline-none focus:border-white transition-colors uppercase font-light"
+                        className="w-full bg-transparent border-b border-amber-400/20 py-3 text-xs tracking-widest focus:outline-none focus:border-amber-400 transition-colors uppercase font-light text-white"
                       />
                     </div>
 
                     <div className="relative">
-                      <label className="text-[8px] tracking-[0.4em] text-white/20 uppercase mb-2 block font-bold">Message / Inquiry</label>
+                      <label className="text-[8px] tracking-[0.4em] text-amber-400/40 uppercase mb-2 block font-bold">Message / Inquiry</label>
                       <textarea
                         name="message"
                         rows="3"
                         required
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full bg-transparent border-b border-white/10 py-3 text-xs tracking-widest focus:outline-none focus:border-white transition-colors uppercase font-light resize-none"
+                        className="w-full bg-transparent border-b border-amber-400/20 py-3 text-xs tracking-widest focus:outline-none focus:border-amber-400 transition-colors uppercase font-light resize-none text-white"
                       ></textarea>
                     </div>
 
@@ -162,7 +162,7 @@ const Contact = () => {
                       whileTap={{ scale: 0.99 }}
                       type="submit"
                       disabled={status.submitting}
-                      className="w-full py-6 bg-white text-black text-[10px] font-bold uppercase tracking-[0.4em] rounded-full disabled:opacity-20 transition-all shadow-2xl"
+                      className="w-full py-6 bg-amber-400 text-[#0a1928] text-[10px] font-bold uppercase tracking-[0.4em] rounded-full disabled:opacity-20 transition-all shadow-2xl hover:bg-amber-300"
                     >
                       {status.submitting ? 'Sending...' : 'Send Message'}
                     </motion.button>

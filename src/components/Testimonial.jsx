@@ -8,17 +8,16 @@ const Testimonial = ({ testimonial }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="relative p-10 lg:p-14 bg-[#0a0a0a] border border-white/5 rounded-3xl flex flex-col items-center text-center"
+      className="relative p-10 lg:p-14 bg-[#0f1f2f] border border-amber-400/20 rounded-3xl flex flex-col items-center text-center"
     >
-      {/* Subtle Quote Icon */}
-      
+      {/* Subtle Quote Icon - can be added later if needed */}
 
-      {/* Modern Rating - Minimalist Dots instead of Stars */}
+      {/* Modern Rating - Minimalist Dots */}
       <div className="flex gap-1.5 mb-8 relative z-10">
         {[...Array(5)].map((_, i) => (
           <div 
             key={i} 
-            className={`w-1 h-1 rounded-full ${i < rating ? 'bg-white' : 'bg-white/10'}`} 
+            className={`w-1 h-1 rounded-full ${i < rating ? 'bg-amber-400' : 'bg-amber-400/10'}`} 
           />
         ))}
       </div>
@@ -30,15 +29,15 @@ const Testimonial = ({ testimonial }) => {
       </blockquote>
 
       <div className="mt-auto">
-        <p className="text-[11px] uppercase tracking-[0.4em] text-white mb-2 font-bold">
+        <p className="text-[11px] uppercase tracking-[0.4em] text-amber-400 mb-2 font-bold">
           {name}
         </p>
         <div className="flex items-center justify-center gap-3">
-          <span className="h-[1px] w-4 bg-white/20" />
-          <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 italic">
+          <span className="h-[1px] w-4 bg-amber-400/20" />
+          <p className="text-[10px] uppercase tracking-[0.2em] text-amber-400/40 italic">
             {role}
           </p>
-          <span className="h-[1px] w-4 bg-white/20" />
+          <span className="h-[1px] w-4 bg-amber-400/20" />
         </div>
       </div>
     </motion.div>

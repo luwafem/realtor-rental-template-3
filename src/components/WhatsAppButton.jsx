@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { siteConfig } from '../config'
 
 const WhatsAppButton = () => {
-  // Updated message for UK Property Advisory
-  const message = encodeURIComponent("Hello, I would like to enquire about off-market property opportunities.")
+  // Updated message for Abuja property inquiries
+  const message = encodeURIComponent("Hello, I would like to enquire about premium properties in Abuja.")
   const link = `https://wa.me/${siteConfig.whatsappNumber}?text=${message}`
 
   return (
@@ -15,13 +15,13 @@ const WhatsAppButton = () => {
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ 
         scale: 1.1, 
-        backgroundColor: 'rgba(255, 255, 255, 1)', 
-        color: '#000' 
+        backgroundColor: '#fbbf24', // amber-400
+        color: '#0a1928' // dark blue
       }}
-      className="fixed bottom-8 right-8 w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full shadow-2xl z-50 flex items-center justify-center transition-colors duration-500"
+      className="fixed bottom-8 right-8 w-14 h-14 bg-[#0a1928]/90 backdrop-blur-md border border-amber-400/30 text-amber-400 rounded-full shadow-2xl z-50 flex items-center justify-center transition-colors duration-500"
       aria-label="Chat on WhatsApp"
     >
-      {/* Refined minimalist chat icon - matches the architectural feel of NAFF Properties */}
+      {/* Refined minimalist chat icon */}
       <svg 
         className="w-6 h-6" 
         fill="none" 
@@ -36,10 +36,10 @@ const WhatsAppButton = () => {
         />
       </svg>
 
-      {/* Discreet notification dot - high-end brands use white/silver rather than green/red */}
+      {/* Discreet notification dot - gold accent */}
       <span className="absolute top-0 right-0 flex h-2.5 w-2.5">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
-        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white/60"></span>
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-40"></span>
+        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400/60"></span>
       </span>
     </motion.a>
   )

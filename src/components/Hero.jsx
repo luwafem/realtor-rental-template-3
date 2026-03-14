@@ -21,8 +21,8 @@ const Hero = () => {
           loading="eager"
         />
         {/* Multilayered Overlay for High-End Text Legibility */}
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#050505]" />
+        <div className="absolute inset-0 bg-[#0a1928]/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1928]/80 via-transparent to-[#0a1928]" />
       </motion.div>
 
       <div className="relative z-10 w-full max-w-6xl mx-auto">
@@ -37,7 +37,7 @@ const Hero = () => {
             initial={{ opacity: 0, tracking: "0.2em" }}
             animate={{ opacity: 1, tracking: "0.5em" }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="text-[10px] uppercase text-white/60 mb-8 font-bold"
+            className="text-[10px] uppercase text-amber-400/80 mb-8 font-bold"
           >
             Strategic Acquisition
           </motion.span>
@@ -46,7 +46,7 @@ const Hero = () => {
             {title}
           </h1>
 
-          <p className="text-base sm:text-lg text-white/60 mb-14 max-w-2xl mx-auto font-light leading-relaxed tracking-wide italic">
+          <p className="text-base sm:text-lg text-white/70 mb-14 max-w-2xl mx-auto font-light leading-relaxed tracking-wide italic">
             {subtitle}
           </p>
 
@@ -57,13 +57,13 @@ const Hero = () => {
           >
             <Link 
               to={ctaLink} 
-              className="relative px-14 py-6 overflow-hidden rounded-full bg-white text-black transition-all duration-700 group flex items-center gap-3"
+              className="relative px-14 py-6 overflow-hidden rounded-full bg-amber-400 text-[#0a1928] transition-all duration-700 group flex items-center gap-3"
             >
               <span className="relative z-10 text-[11px] font-bold tracking-[0.3em] uppercase">
                 {ctaText}
               </span>
               {/* Refined button hover effect */}
-              <div className="absolute inset-0 w-full h-full bg-neutral-200 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              <div className="absolute inset-0 w-full h-full bg-amber-300 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </Link>
           </motion.div>
         </motion.div>
@@ -76,11 +76,11 @@ const Hero = () => {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6"
       >
-        <div className="w-[1px] h-20 bg-gradient-to-b from-white/40 to-transparent relative overflow-hidden">
+        <div className="w-[1px] h-20 bg-gradient-to-b from-amber-400/40 to-transparent relative overflow-hidden">
           <motion.div 
             animate={{ y: [-40, 80] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-            className="absolute top-0 left-0 w-full h-1/2 bg-white/80"
+            className="absolute top-0 left-0 w-full h-1/2 bg-amber-400/80"
           />
         </div>
       </motion.div>
